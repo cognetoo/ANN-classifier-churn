@@ -6,7 +6,7 @@ from sklearn.preprocessing import StandardScaler,LabelEncoder,OneHotEncoder
 import tensorflow as tf
 
 ##load the model
-model = tf.keras.models.load_model('model.keras')
+model = tf.keras.models.load_model('model.keras',compile=False)
 
 ##Load the encoders and scaler
 with open('label_encoder_gender.pkl','rb') as file:
