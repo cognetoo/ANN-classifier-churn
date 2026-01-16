@@ -64,4 +64,8 @@ input_data_scaled = scaler.transform(input_data)
 prediction = model.predict(input_data_scaled)
 prediction_salary = float(prediction[0][0])
 
+
+prediction_salary = max(0, prediction_salary)
+prediction_salary = min(prediction_salary, 300000)
+
 st.write(f"Prediction salary :${prediction_salary:.2f}")
